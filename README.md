@@ -14,7 +14,7 @@ Users Database REST API
 ## Setup 
 
 - API built in Django and Djangorestframework
-- API hosted on pythonanywhere.com as [kcmail823.pythonanywhere.com](kcmail823.pythonanywhere.com)
+- API hosted on pythonanywhere.com as [kcmail823.pythonanywhere.com](https://kcmail823.pythonanywhere.com)
 - postman api doc link [documenter.getpostman.com/view/22943771/VUxNRTZU](https://documenter.getpostman.com/view/22943771/VUxNRTZU)
 - create a web app in pythonanywhere and use the inbuilt sqlite3 database
 - create a django project named myWebsite
