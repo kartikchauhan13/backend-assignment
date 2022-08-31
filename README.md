@@ -16,16 +16,16 @@ Users Database REST API
 - API built in Django and Djangorestframework
 - API hosted on pythonanywhere.com with url [kcmail823.pythonanywhere.com](https://kcmail823.pythonanywhere.com)
 - postman api doc link [documenter.getpostman.com/view/22943771/VUxNRTZU](https://documenter.getpostman.com/view/22943771/VUxNRTZU)
-- create a web app in pythonanywhere and use the inbuilt sqlite3 database
-- create a django project named myWebsite
+- create a django web app in pythonanywhere and use the inbuilt sqlite3 database
+- create the web app with name of  myWebsite 
 - create an app named API in the myWebsite project
-- create an user model for the Users database
-- create serializers for the model 
-- create custom pagination for the json response 
-- add Search filter in views for name
-- add ordering filter in view for ascending adn descending order
-- define urls for api access
-- map urls with views and templates
+- create an user model for the Users database in API app
+- create serializers for the model in API app
+- create custom pagination for the json response in API app
+- add Search filter in views for name in API app
+- add ordering filter in view for ascending adn descending order in views of API app
+- define urls for api access in low level myWebsite urls
+- map urls with views and templates of API app
 - create request handler views in views of API app
 - add default rest_framework settings in settings of myWebsite
 - set query parameters for API app in settings of myWebsite 
