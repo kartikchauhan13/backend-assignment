@@ -1,10 +1,6 @@
 # Backend Assignment
 
-Create REST APIs using Python (Flask, Django, any other web framework of your choice) for managing the user’s data.  
-You can use database(i.e SQL, NOSQL) of your choice to store the data.  
-Take sample data from [here](https://datapeace-storage.s3-us-west-2.amazonaws.com/dummy_data/users.json).
-
-It should have following functionalities:
+Users Database REST API
 
 - list users (`/api/users GET`)
 - search for a user by name
@@ -15,137 +11,28 @@ It should have following functionalities:
 - update details of a user (`/api/users - PUT`)
 - delete a user (`/api/users - DELETE`)
 
-_Attention to detail and meeting all requirements is important in the project. Completing it in less time will not give you any preference._
+## Setup 
 
-## **Task Overview**
-
-User should have the following attributes:-
-
-```
-ID
-First Name
-Last Name
-Company Name
-Age
-City
-State
-Zip
-Email
-Web
-```
-
-Application should have the following endpoints:
-
-- `/api/users - GET` - To list the users
-
-  - Response with HTTP status code 200 on success
-
-    ```json
-    [
-      {
-        "id": 1,
-        "first_name": "James",
-        "last_name": "Butt",
-        "company_name": "Benton, John B Jr",
-        "city": "New Orleans",
-        "state": "LA",
-        "zip": 70116,
-        "email": "jbutt@gmail.com",
-        "web": "http://www.bentonjohnbjr.com",
-        "age": 70
-      },
-      {
-        "id": 2,
-        "first_name": "Josephine",
-        "last_name": "Darakjy",
-        "company_name": "Chanay, Jeffrey A Esq",
-        "city": "Brighton",
-        "state": "MI",
-        "zip": 48116,
-        "email": "josephine_darakjy@darakjy.org",
-        "web": "http://www.chanayjeffreyaesq.com",
-        "age": 48
-      }
-    ]
-    ```
-
-  - Also, supports some query parameters:
-  - page - a number for pagination
-  - limit - no. of items to be returned, default limit is 5
-  - name - search user by name as a substring in First Name or Last Name (Note, use substring matching algorithm/pattern to match the name). It should be case-insensitive.
-  - Sort - name of attribute, the items to be sorted. By default it returns items in ascending order if this parameter exist, and if the value of parameter is prefixed with ‘-’ character, then it should return items in descending order
-
-  Sample query endpoint:- `/api/users?page=1&limit=10&name=James&sort=-age` This endpoint should return list of 10 users whose first name or last name contains substring given name and sort the users by age in descending order of page 1.
-
-- `/api/users - POST` - To create a new user
-
-  - Request Payload should be like in json format :-
-
-    ```json
-    {
-      "id": 2,
-      "first_name": "Josephine",
-      "last_name": "Darakjy",
-      "company_name": "Chanay, Jeffrey A Esq",
-      "city": "Brighton",
-      "state": "MI",
-      "zip": 48116,
-      "email": "josephine_darakjy@darakjy.org",
-      "web": "http://www.chanayjeffreyaesq.com",
-      "age": 48
-    }
-    ```
-
-  - Response with HTTP status code 201 on success
-    ```json
-    {}
-    ```
-  - This endpoint will create a new user inside the database
-
-- `/api/users/{id} - GET` - To get the details of a user
-
-  1. Here {id} will be the id of the user in path parameter
-  1. Response with HTTP status code 200 on success
-
-  ```json
-  {
-    "id": 1,
-    "first_name": "James",
-    "last_name": "Butt",
-    "company_name": "Benton, John B Jr",
-    "city": "New Orleans",
-    "state": "LA",
-    "zip": 70116,
-    "email": "jbutt@gmail.com",
-    "web": "http://www.bentonjohnbjr.com",
-    "age": 70
-  }
-  ```
-
-  Sample query looks like:- `/api/users/1 GET`
-
-- `/api/users/{id} PUT` - To update the details of a user
-
-  - Here {id} will be the id of the user in path parameter
-  - Request Payload should be like in json format for updating first name, last name and age:-
-    ```json
-    {
-      "first_name": "Josephine",
-      "last_name": "Darakjy",
-      "age": 48
-    }
-    ```
-  - Response with HTTP status code 200 on success
-    {}
-
-- `/api/users/{id} DELETE` - To delete the user
-
-  - Here {id} will be the id of the user in path parameter
-  - Response with HTTP status code 200 on success
-
-    ```json
-    {}
-    ```
+- API built in Django and Djangorestframework
+- API hosted on pythonanywhere.com as [kcmail823.pythonanywhere.com](kcmail823.pythonanywhere.com)
+- postman api doc link [documenter.getpostman.com/view/22943771/VUxNRTZU](https://documenter.getpostman.com/view/22943771/VUxNRTZU)
+- create a web app in pythonanywhere and use the inbuilt sqlite3 database
+- create a django project named myWebsite
+- create an app named API in the myWebsite project
+- create an user model for the Users database
+- create serializers for the model 
+- create custom pagination for the json response 
+- add Search filter in views for name
+- add ordering filter in view for ascending adn descending order
+- define urls for api access
+- map urls with views and templates
+- create request handler views in views of API app
+- add default rest_framework settings in settings of myWebsite
+- set query parameters for API app in settings of myWebsite 
+- create templates , static adn media folders
+- create template for API
+- test api in postman by CRUD operations
+- create API documentation in postman 
 
 ## Resources:
 
@@ -153,9 +40,9 @@ Application should have the following endpoints:
 
 ## **Instructions**
 
-- [ ] README.md should have all the details and instructions like how to setup and run the project
-- [ ] Repo should not contain irrelevant folders/files like cache files, build/dist directories etc.
-- [ ] Create API documentation using Swagger or similar framework
+- [x] README.md should have all the details and instructions like how to setup and run the project
+- [x] Repo should not contain irrelevant folders/files like cache files, build/dist directories etc.
+- [x] Create API documentation using Swagger or similar framework
 - [ ] Follow these steps for submission:
   1. Fork the repository
   1. Create issues and work on them in their respective branches
