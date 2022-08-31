@@ -14,7 +14,7 @@ Users Database REST API
 ## Setup 
 
 - API built in Django and Djangorestframework
-- API hosted on pythonanywhere.com as [kcmail823.pythonanywhere.com](https://kcmail823.pythonanywhere.com)
+- API hosted on pythonanywhere.com with url [kcmail823.pythonanywhere.com](https://kcmail823.pythonanywhere.com)
 - postman api doc link [documenter.getpostman.com/view/22943771/VUxNRTZU](https://documenter.getpostman.com/view/22943771/VUxNRTZU)
 - create a web app in pythonanywhere and use the inbuilt sqlite3 database
 - create a django project named myWebsite
@@ -43,7 +43,7 @@ Users Database REST API
 - [x] README.md should have all the details and instructions like how to setup and run the project
 - [x] Repo should not contain irrelevant folders/files like cache files, build/dist directories etc.
 - [x] Create API documentation using Swagger or similar framework
-- [ ] Follow these steps for submission:
+- [X] Follow these steps for submission:
   1. Fork the repository
   1. Create issues and work on them in their respective branches
   1. Complete the tasks while following all instructions
